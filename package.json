@@ -1,0 +1,53 @@
+{
+  "name": "zip-cracker-electron",
+  "version": "1.0.0",
+  "description": "ZIP 암호 크래커 - Electron 버전",
+  "main": "main.js",
+  "scripts": {
+    "start": "sass styles.scss styles.css && electron .",
+    "dev": "concurrently \"sass styles.scss styles.css --watch\" \"electron .\"",
+    "build": "sass styles.scss styles.css && electron-builder",
+    "build:dir": "sass styles.scss styles.css && electron-builder --dir",
+    "scss": "sass styles.scss styles.css --watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "build": {
+    "appId": "com.zipcracker.app",
+    "productName": "ZIP 암호 크래커",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "styles.css",
+      "styles.css.map",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": null
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerLanguages": [
+        "ko"
+      ],
+      "language": "1042"
+    }
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "sass": "^1.97.3"
+  }
+}
