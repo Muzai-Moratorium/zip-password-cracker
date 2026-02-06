@@ -26,8 +26,8 @@ function createWindow() {
     mainWindow.show();
   });
 
-  // 개발자 도구 (디버깅용)
-  mainWindow.webContents.openDevTools();
+  // 개발자 도구 (디버깅용) - 배포 시 주석 처리
+  // mainWindow.webContents.openDevTools();
 
   // 개발용: 파일 변경 시 자동 새로고침
   const watchFiles = ["index.html", "styles.css", "renderer.js"];
