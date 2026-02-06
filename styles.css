@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "OngleipParkDahyeon";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "OngleipParkDahyeon", sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 20px;
+  gap: 25px;
+}
+.container header {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.container header h1 {
+  background: linear-gradient(180deg, #f5e1a4, #e3b448);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.container .main-content {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+.container .main-content .card-progress {
+  flex: 1;
+  padding: 30px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.container .main-content .card-progress h2 {
+  text-align: center;
+}
+.container .main-content .card-progress:hover {
+  box-shadow: 0 0 10px #e3b448;
+}
+.container .main-content .card-options {
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.container .main-content .card-options h2 {
+  text-align: center;
+}
+.container .main-content .card-options:hover {
+  box-shadow: 0 0 10px #e3b448;
+}
+.container .card {
+  margin-bottom: 20px;
+}
+.container .card h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+.container .card .file-selector {
+  display: flex;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.container .card .file-selector:hover, .container .card .file-selector:focus-within {
+  box-shadow: 0 0 10px #e3b448;
+}
+.container .card .file-selector input {
+  text-align: center;
+  width: 280px;
+  height: 45px;
+  border: none;
+  font-size: 18px;
+  outline: none;
+  background: white;
+}
+.container .card .file-selector #selectFileBtn {
+  background: linear-gradient(15deg, #f5e1a4, #e3b448);
+  color: rgb(255, 255, 255);
+  border: none;
+  width: 100px;
+  height: 45px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .card .file-selector #selectFileBtn:hover {
+  filter: brightness(1.1);
+}
+.container .card .option-group {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.container .card .sub-option {
+  font-size: 18px;
+}
+.container .card .sub-option .number-input {
+  font-size: 18px;
+  width: 80px;
+}
+.container .card .file-info {
+  font-size: 18px;
+}
+.container .card .progress-text {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.container .card .log-container {
+  font-size: 16px;
+}
+.container .button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.container .button-group .btn {
+  padding: 15px 30px;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  color: white;
+  transition: 0.3s;
+  background: linear-gradient(180deg, #f5e1a4, #e3b448);
+}
+.container .button-group .btn:hover {
+  filter: brightness(1.1);
+}
+.container .button-group .btn:disabled {
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=styles.css.map */

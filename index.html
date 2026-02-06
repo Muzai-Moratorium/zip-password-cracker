@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' https://cdn.jsdelivr.net"
+    />
+    <title>ZIP 암호 크래커</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>♤ZIP 암호 크래커♧</h1>
+      </header>
+      <!-- 파일 선택 -->
+      <section class="card">
+        <h2>대상 파일 선택</h2>
+        <div class="file-selector">
+          <input
+            type="text"
+            id="filePath"
+            readonly
+            placeholder="ZIP 파일을 선택하세요..."
+          />
+          <button id="selectFileBtn" class="btn btn-secondary">
+            파일 열기
+          </button>
+        </div>
+        <div id="fileInfo" class="file-info hidden"></div>
+      </section>
+
+      <div class="main-content">
+        <!-- 공격 옵션 (왼쪽) -->
+        <section class="card card-options">
+          <h2>공격 옵션</h2>
+          <div class="option-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="useCommon" checked />
+              <span class="checkmark"></span>
+              흔한 암호 목록 시도 (1단계)
+            </label>
+          </div>
+
+          <div class="option-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="useNumeric" checked />
+              <span class="checkmark"></span>
+              숫자 조합 (2단계)
+            </label>
+            <div class="sub-option">
+              <label>최대 자리수:</label>
+              <input
+                type="number"
+                id="numDigits"
+                value="6"
+                min="1"
+                max="12"
+                class="number-input"
+              />
+            </div>
+          </div>
+
+          <div class="option-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="useAlphanum" checked />
+              <span class="checkmark"></span>
+              영문+숫자 조합 (3단계 - 매우 느림)
+            </label>
+            <div class="sub-option">
+              <label>최대 자리수:</label>
+              <input
+                type="number"
+                id="alphaDigits"
+                value="4"
+                min="1"
+                max="6"
+                class="number-input"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- 진행 상황 (오른쪽) -->
+        <section class="card card-progress">
+          <h2>진행 상황</h2>
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <div id="progressText" class="progress-text">대기 중...</div>
+          <div id="logContainer" class="log-container">
+            <div id="log"></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 제어 버튼 -->
+      <div class="button-group">
+        <button id="startBtn" class="btn btn-primary">크래킹 시작</button>
+        <button id="stopBtn" class="btn btn-danger" disabled>중지</button>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
