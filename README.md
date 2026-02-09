@@ -14,18 +14,7 @@
 
 ## 🐱 설치 방법
 
-### 방법 1: 설치파일 사용
-
-1. `dist` 폴더에서 `ZIP 암호 크래커 Setup 1.0.0.exe` 실행
-2. 설치 진행
-3. 바탕화면 또는 시작메뉴에서 실행
-
-### 방법 2: 포터블 버전
-
-1. `dist/win-unpacked` 폴더를 원하는 위치에 복사
-2. `ZIP 암호 크래커.exe` 실행
-
----
+[설치 링크!](https://github.com/Muzai-Moratorium/zip-password-cracker/releases/tag/v1.0.0)
 
 ## 🐱 사용 방법
 
@@ -99,7 +88,5 @@ zip-cracker-electron/
 ---
 
 <div align="center">
-
-**![Copyright](https://img.shields.io/badge/Copyright-2026_Muzai_Moratorium._All_Rights_Reserved.-8E75B2?style=flat&labelColor=444444)**
 
 </div>
